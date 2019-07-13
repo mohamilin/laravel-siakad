@@ -80,7 +80,7 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Password Akun</label>
             <div class="input-group input-group-alternative">
-              <input class="form-control" type="password" name="password" required>
+              <input class="form-control" type="password" name="password">
             </div>
           </div>
         </div>

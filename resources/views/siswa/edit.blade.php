@@ -19,13 +19,13 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">NIS</label>
             <div class="input-group input-group-alternative">
-              <input class="form-control" type="number" name="nis" value="{{ $siswa->nis }}">
+              <input class="form-control" type="number" name="nis" value="{{ $siswa->nis }}" required>
             </div>
           </div>
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Nama Siswa</label>
             <div class="input-group input-group-alternative">
-              <input class="form-control" type="text" name="nama_siswa" value="{{ $siswa->nama_siswa }}">
+              <input class="form-control" type="text" name="nama_siswa" value="{{ $siswa->nama_siswa }}" required>
             </div>
           </div>
           <div class="form-group mb-3">
@@ -47,19 +47,19 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Tempat Lahir</label>
             <div class="input-group input-group-alternative">
-              <input class="form-control" type="text" name="tempat_lahir" value="{{ $siswa->tempat_lahir }}">
+              <input class="form-control" type="text" name="tempat_lahir" value="{{ $siswa->tempat_lahir }}" required>
             </div>
           </div>
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Tanggal Lahir</label>
             <div class="input-group input-group-alternative">
-              <input class="form-control" type="date" name="tgl_lahir" value="{{ $siswa->tgl_lahir }}">
+              <input class="form-control" type="date" name="tgl_lahir" value="{{ $siswa->tgl_lahir }}" required>
             </div>
           </div>
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Alamat</label>
             <div class="input-group input-group-alternative">
-              <textarea name="alamat" class="form-control">{{ $siswa->alamat }}</textarea>
+              <textarea name="alamat" class="form-control" required>{{ $siswa->alamat }}</textarea>
             </div>
           </div>
           <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Simpan</button>
@@ -68,13 +68,13 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">No. Telepon</label>
             <div class="input-group input-group-alternative">
-            <input class="form-control" type="number" name="no_telepon" value="{{ $siswa->no_telepon }}">
+            <input class="form-control" type="number" name="no_telepon" value="{{ $siswa->no_telepon }}" required>
             </div>
           </div>
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Agama</label>
             <div class="input-group input-group-alternative">
-              <select name="agama" class="form-control">
+              <select name="agama" class="form-control" required>
                 @foreach ($agama as $d)
                   <option value="{{ $d }}" {{ ($d == $siswa->agama) ? 'selected' : '' }}>{{ $d }}</option>
                 @endforeach
@@ -84,7 +84,7 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Status</label>
             <div class="input-group input-group-alternative">
-              <select name="status" class="form-control">
+              <select name="status" class="form-control" required>
                 @foreach ($status as $d)
                   <option value="{{ $d }}" {{ ($d == $siswa->status) ? 'selected' : '' }}>{{ $d }}</option>
                 @endforeach
@@ -103,7 +103,7 @@
           <div class="form-group mb-3">
             <label for="" class="text-sm font-weight-bold">Kelas</label>
             <div class="input-group input-group-alternative">
-              <select name="id_kelas" class="form-control">
+              <select name="id_kelas" class="form-control" required>
                 @foreach ($kelas as $d)
                   <option value="{{ $d->id_kelas }}" {{ ($d->id_kelas == $siswa->id_kelas) ? 'selected' : '' }}>{{ $d->tahun_ajar.' - '.$d->kelas.' '.$d->jurusan }}</option>  
                 @endforeach
