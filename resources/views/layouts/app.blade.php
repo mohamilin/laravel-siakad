@@ -205,7 +205,7 @@
                   @if (Session::get('user_type') == 'siswa')
                   <img alt="Image placeholder" src="{{ asset('images/'. Session::get('foto_siswa')) }}">
                   @else
-                  <img alt="Image placeholder" src="{{ asset('argon/assets/img/theme/team-4-800x800.jpg') }}">
+                  <img alt="Image placeholder" src="{{ asset('images/profil.jpeg') }}">
                   @endif
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
